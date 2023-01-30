@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    // подсвечивает все места, где не указан тип
+    // если где-то нет типа, нужно явно писать any
+    "noImplicitAny": true,
+    // используем посленюю версию JS
+    "module": "ESNext",
+    // в какую версию js будет компиляция, для поддержки большинства браузеров
+    "target": "es5",
+    "jsx": "react",
+    // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
+    "allowJs": true,
+    "moduleResolution": "node",
+    // позволяет работать с пакетами, которые обычно используют common js = (require() module.export)
+    // а он позволяет сделать обычный import
+    // import Moment from 'moment';
+    "esModuleInterop": true,
+    // позволяет импортировать некоторые пакеты без звездочее
+    // import * as React from 'react';
+    // можно заменить на
+    // import React from 'react';
+    "allowSyntheticDefaultImports": true,
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
