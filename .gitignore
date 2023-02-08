@@ -2,4 +2,4 @@ node_modules/
 .idea/.gitignore
 .idea/modules.xml
 .idea/
-build/
+/build/

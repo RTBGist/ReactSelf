@@ -4,12 +4,12 @@
   background: var(--inverted-bg-color);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 20px;
 }
 .links a {
   margin-right: 15px;
 }
 .links a:last-child {
-  margin-right: 0px;
+  margin-right: 0;
 }
