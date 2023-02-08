@@ -1,0 +1,15 @@
+.Navbar {
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--inverted-bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.links a {
+  margin-right: 15px;
+}
+.links a:last-child {
+  margin-right: 0px;
+}
