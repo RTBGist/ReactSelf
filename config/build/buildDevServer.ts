@@ -6,6 +6,8 @@ export function buildDevServer(options: BuildOptions): DevServerConfiguration {
 		port: options.port,
 		open: true,
 		// предотвращение ошибки cannot get, проксирование запросов через index.html
-		historyApiFallback: true
+		historyApiFallback: true,
+		// HMR webpack
+		hot: true,
 	}
 }
