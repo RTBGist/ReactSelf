@@ -46,7 +46,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     // будет ругаться только внутри jsx при отсутствии перевода
     'i18next/no-literal-string': ['error', { markupOnly: true }],
-    'max-len': 'warn',
+    'max-len': ['error', { ignoreComments: true }],
   },
   globals: {
     __IS_DEV__: true,
