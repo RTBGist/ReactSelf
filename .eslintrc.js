@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'plugin:i18next/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -18,6 +19,7 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
+    'i18next',
   ],
   rules: {
     // в airbnb табы отключены, выключаем ошибки эти
@@ -41,6 +43,8 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     // отключаем ошибки на нижние подчеркивания
     'no-underscore-dangle': 'off',
+    // будет ругаться только внутри jsx при отсутствии перевода
+    'i18next/no-literal-string': ['error', { markupOnly: true }],
   },
   globals: {
     __IS_DEV__: true,
