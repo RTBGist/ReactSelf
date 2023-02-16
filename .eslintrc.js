@@ -45,10 +45,22 @@ module.exports = {
     // отключаем ошибки на нижние подчеркивания
     'no-underscore-dangle': 'off',
     // будет ругаться только внутри jsx при отсутствии перевода
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': ['error', {
+      markupOnly: true,
+      ignoreAttribute: ['data-testid'],
+    }],
     'max-len': ['error', { ignoreComments: true, code: 100 }],
   },
   globals: {
     __IS_DEV__: true,
   },
+  overrides: [
+    // отключили в тестовых файлах переводчик (ворнинг линта)
+    {
+      files: ['**/src/**/*.test.{ts, tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
 };
