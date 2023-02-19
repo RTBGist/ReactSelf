@@ -22,9 +22,9 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
       // Прокинули глобальную переменную в проект
       __IS_DEV__: JSON.stringify(isDev),
     }),
-		new BundleAnalyzerPlugin({
-			openAnalyzer: false,
-			analyzerMode: "disabled", // отключен, чтоб не грузить сборку
-		}),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+      analyzerMode: 'disabled', // отключен, чтоб не грузить сборку
+    }),
   ];
 }
