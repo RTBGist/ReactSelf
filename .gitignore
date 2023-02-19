@@ -4,3 +4,4 @@ node_modules/
 .idea/
 /build/
 /extractedTranslations/
+/storybook-static/
