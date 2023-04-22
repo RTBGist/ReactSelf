@@ -28,7 +28,7 @@ export const Navbar = ({ className }: NavbarProps) => {
       </Button>
 
       <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-        123
+        <p>123</p>
       </Modal>
     </div>
   );
