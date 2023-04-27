@@ -34,6 +34,7 @@ export const Navbar = ({ className }: NavbarProps) => {
       <LoginModal
         isOpen={isAuthModal}
         onClose={onCloseModal}
+        focus
       />
     </div>
   );

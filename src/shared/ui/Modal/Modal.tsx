@@ -10,7 +10,6 @@ interface ModalProps {
 	children?: ReactNode,
 	isOpen?: boolean;
 	onClose?: () => void;
-	lazy?: boolean;
 }
 
 export const Modal = (props: ModalProps) => {
@@ -19,19 +18,11 @@ export const Modal = (props: ModalProps) => {
     children,
     isOpen,
     onClose,
-    lazy,
   } = props;
 
-  const [isMounted, setIsMounted] = useState(false);
   const mods: Record<string, boolean> = {
     [cls.opened]: isOpen,
   };
-
-  useEffect(() => {
-    if (isOpen) {
-      setIsMounted(true);
-    }
-  }, [isOpen]);
 
   const closeHandler = useCallback(() => {
     if (onClose) {
@@ -54,10 +45,6 @@ export const Modal = (props: ModalProps) => {
       window.removeEventListener('keydown', onKeyDown);
     };
   }, [isOpen, onKeyDown]);
-
-  if (lazy && !isMounted) {
-    return null;
-  }
 
   return (
     <Portal>
