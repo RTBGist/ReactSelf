@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import React, {
-  InputHTMLAttributes, memo, MutableRefObject, useEffect, useRef, useState,
+  InputHTMLAttributes, memo, useEffect, useRef,
 } from 'react';
 import cls from './Input.module.scss';
 
@@ -12,6 +12,7 @@ interface InputProps extends HTMLInputProps {
 	value?: string;
 	onChange?: (value: string) => void;
 	focus?: boolean,
+	modalIsOpen?: boolean,
 }
 
 export const Input = memo((props: InputProps) => {
@@ -22,6 +23,7 @@ export const Input = memo((props: InputProps) => {
     type = 'text',
     placeholder = '',
     focus,
+    modalIsOpen,
     ...otherProps
   } = props;
 
@@ -30,16 +32,16 @@ export const Input = memo((props: InputProps) => {
   useEffect(() => {
     let timerId: ReturnType<typeof setTimeout>;
 
-    if (focus) {
+    if (modalIsOpen && focus) {
       timerId = setTimeout(() => {
         ref.current.focus();
-      }, 0);
+      }, 100);
     }
 
     return () => {
       clearTimeout(timerId);
     };
-  }, [focus]);
+  }, [focus, modalIsOpen]);
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     onChange?.(e.target.value);
