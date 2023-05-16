@@ -50,7 +50,7 @@ module.exports = {
       markupOnly: true,
       ignoreAttribute: ['data-testid', 'to'],
     }],
-    'max-len': ['error', { ignoreComments: true, code: 100 }],
+    'max-len': ['error', { ignoreComments: true, code: 120 }],
     'linebreak-style': ['error', 'unix'],
     'jsx-a11y/no-static-element-interactions': 'off',
     'react-hooks/rules-of-hooks': 'error',

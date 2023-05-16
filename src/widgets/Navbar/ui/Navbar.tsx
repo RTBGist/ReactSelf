@@ -15,14 +15,17 @@ export const Navbar = ({ className }: NavbarProps) => {
   const { t } = useTranslation();
   const authData = useSelector(getUserAuthData);
   const dispatch = useDispatch();
+  const [isAuthModalMounted, setIsAuthModalMounted] = useState(false);
   const [isAuthModal, setIsAuthModal] = useState(false);
 
   const onCloseModal = useCallback(() => {
     setIsAuthModal(false);
+    setTimeout(() => setIsAuthModalMounted(false), 500);
   }, []);
 
   const onShowModal = useCallback(() => {
-    setIsAuthModal(true);
+    setTimeout(() => setIsAuthModal(true), 100);
+    setIsAuthModalMounted(true);
   }, []);
 
   const onLogout = useCallback(() => {
@@ -39,12 +42,6 @@ export const Navbar = ({ className }: NavbarProps) => {
         >
           {t('Выйти')}
         </Button>
-
-        <LoginModal
-          isOpen={isAuthModal}
-          onClose={onCloseModal}
-          focus
-        />
       </div>
     );
   }
@@ -59,11 +56,13 @@ export const Navbar = ({ className }: NavbarProps) => {
         {t('Войти')}
       </Button>
 
-      <LoginModal
-        isOpen={isAuthModal}
-        onClose={onCloseModal}
-        focus
-      />
+      {isAuthModalMounted && (
+        <LoginModal
+          isOpen={isAuthModal}
+          onClose={onCloseModal}
+          focus
+        />
+      )}
     </div>
   );
 };
