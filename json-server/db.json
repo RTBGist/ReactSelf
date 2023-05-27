@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Rinat",
+    "lastname": "Yourdeveloper",
+    "age": 26,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "LA",
+    "username": "admin",
+    "avatar": "https://avatars.mds.yandex.net/i?id=22536ff7dbe5f23d501de2dd7642d09351630ca2-8178526-images-thumbs&n=13"
+  }
 }

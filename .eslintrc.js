@@ -31,7 +31,6 @@ module.exports = {
     // отключение ворнинга на абсолютные пути
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
-    'no-unused-vars': 'warn',
     'react/require-default-props': 'off',
     // обязательный импорт реакта отключаем, с 17 версии не нужно
     'react/react-in-jsx-scope': 'off',
@@ -40,6 +39,9 @@ module.exports = {
     // просит использовать function declaration вместо () => {отключили}
     'react/function-component-definition': 'off',
     'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': ['error'],
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
     // отключаем ошибки на неуказывание расширений (У нас настроен webpack на это)
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
