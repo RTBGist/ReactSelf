@@ -34,7 +34,7 @@ export const Input = memo((props: InputProps) => {
 
     if (modalIsOpen && focus) {
       timerId = setTimeout(() => {
-        ref.current.focus();
+        ref.current?.focus();
       }, 100);
     }
 
