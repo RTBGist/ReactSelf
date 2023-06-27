@@ -1,0 +1,21 @@
+.profilePageHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  .editBtn {
+    margin-left: auto;
+  }
+
+  .buttonWrap {
+    display: flex;
+
+    .editBtn {
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@ export interface SidebarItemType {
 	path: string;
 	text: string;
 	Icon: any;
+  authOnly?: boolean;
 }
 
 export const SidebarItemList: SidebarItemType[] = [
@@ -19,11 +20,12 @@ export const SidebarItemList: SidebarItemType[] = [
   {
     path: RoutePath.about,
     Icon: AboutIcon,
-    text: 'О сайте',
+    text: 'О нас',
   },
   {
     path: RoutePath.profile,
     Icon: ProfileIcon,
     text: 'Профиль',
+    authOnly: true,
   },
 ];

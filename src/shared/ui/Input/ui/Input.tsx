@@ -1,18 +1,19 @@
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import React, {
   InputHTMLAttributes, memo, useEffect, useRef,
 } from 'react';
 import cls from './Input.module.scss';
 
 // Забрал свойства, за исключением value и onChange, их ниже указал
-type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
+type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange' | 'readOnly'>
 
 interface InputProps extends HTMLInputProps {
-	className?: string,
-	value?: string;
+	className?: string;
+	value?: string | number;
 	onChange?: (value: string) => void;
-	focus?: boolean,
-	modalIsOpen?: boolean,
+	focus?: boolean;
+	modalIsOpen?: boolean;
+  readonly?: boolean;
 }
 
 export const Input = memo((props: InputProps) => {
@@ -24,6 +25,7 @@ export const Input = memo((props: InputProps) => {
     placeholder = '',
     focus,
     modalIsOpen,
+    readonly,
     ...otherProps
   } = props;
 
@@ -47,14 +49,19 @@ export const Input = memo((props: InputProps) => {
     onChange?.(e.target.value);
   };
 
+  const mods: Mods = {
+    [cls.readonly]: readonly,
+  };
+
   return (
     <input
       ref={ref}
-      className={classNames(cls.Input, {}, [className])}
+      className={classNames(cls.Input, mods, [className])}
       type={type}
       value={value}
       placeholder={placeholder}
       onChange={onChangeHandler}
+      readOnly={readonly}
       {...otherProps}
     />
   );

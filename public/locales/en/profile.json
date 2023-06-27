@@ -1,5 +1,15 @@
 {
   "Профиль": "Profile",
   "Ваше имя": "Your name",
-  "Ваша фамилия": "Your lastname"
+  "Ваша фамилия": "Your lastname",
+  "Ваш город": "Your city",
+  "Ваш возраст": "Your age",
+  "Ваш аватар": "Your avatar",
+  "Ваш ник": "Your username",
+  "Аватар": "Avatar",
+  "Редактировать": "Edit",
+  "Отменить": "Cancel",
+  "Сохранить": "Save",
+  "Попробуйте обновить страницу": "Try to refresh page",
+  "Произошла ошибка при загрузке профиля": "Something went wrong in profile page"
 }

@@ -6,6 +6,7 @@
   "Страница не найдена": "Page not found",
   "О нас": "About",
   "Главная": "Main",
+  "Профиль": "Profile",
   "Короткий язык": "EN",
   "Войти": "Sign in",
   "Выйти": "Sign out",
@@ -13,5 +14,6 @@
   "Введите пароль": "Enter password",
   "Форма авторизации": "Auth form",
   "Вы ввели неправильный логин или пароль": "Incorrect login or password",
-  "Редактировать": "Edit"
+  "Укажите валюту": "Choose currency",
+  "Укажите страну": "Choose country"
 }
