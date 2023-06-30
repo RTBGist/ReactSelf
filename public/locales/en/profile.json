@@ -11,5 +11,10 @@
   "Отменить": "Cancel",
   "Сохранить": "Save",
   "Попробуйте обновить страницу": "Try to refresh page",
-  "Произошла ошибка при загрузке профиля": "Something went wrong in profile page"
+  "Произошла ошибка при загрузке профиля": "Something went wrong in profile page",
+  "Серверная ошибка": "Server error",
+  "Выберите страну": "Choose country",
+  "Некорректный возраст": "Incorrect age",
+  "Имя и фамилия обязательны": "First and lastname required",
+  "Данные не указаны": "No data"
 }
