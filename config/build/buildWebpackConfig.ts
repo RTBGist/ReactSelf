@@ -18,6 +18,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
       path: paths.build,
       // очищает каждый раз папку build перед самим build
       clean: true,
+      publicPath: '/',
     },
     plugins: buildPlugins(options),
     module: {
