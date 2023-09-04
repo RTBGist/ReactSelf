@@ -7,6 +7,7 @@
   "О нас": "About",
   "Главная": "Main",
   "Профиль": "Profile",
+  "Статьи": "Articles",
   "Короткий язык": "EN",
   "Войти": "Sign in",
   "Выйти": "Sign out",
@@ -15,5 +16,8 @@
   "Форма авторизации": "Auth form",
   "Вы ввели неправильный логин или пароль": "Incorrect login or password",
   "Укажите валюту": "Choose currency",
-  "Укажите страну": "Choose country"
+  "Укажите страну": "Choose country",
+  "Комментарии отсутствуют": "No comments",
+  "Введите текст комментария": "Enter text",
+  "Отправить": "Send"
 }

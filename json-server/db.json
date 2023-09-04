@@ -23,6 +23,30 @@
       "text": "some comment 2",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "тест коммент",
+      "id": "PrN-hlU"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Дароу",
+      "id": "JDbH-va"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Darova",
+      "id": "UusuucN"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "user 123",
+      "id": "Rvvy07m"
     }
   ],
   "users": [
@@ -30,13 +54,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://static.sobaka.ru/images/image/00/80/54/85/_normal.jpg?v=1485945088"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://www.pnp.ru/upload/entities/2022/11/01/16/article/detailPicture/70/85/cc/a6/35926b3f74d729dc51ca6331aad642bd.jpg"
     }
   ],
   "articles": [
@@ -47,7 +73,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -110,14 +138,28 @@
       ]
     }
   ],
-  "profile": {
-    "first": "32",
-    "lastname": "Yourdeveloper123sdds",
-    "age": 3,
-    "currency": "EUR",
-    "country": "Russia",
-    "city": "",
-    "username": "admin",
-    "avatar": "https://avatars.mds.yandex.net/i?id=22536ff7dbe5f23d501de2dd7642d09351630ca2-8178526-images-thumbs&n=13"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "32",
+      "lastname": "Yourdeveloper",
+      "age": 3,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "",
+      "username": "admin",
+      "avatar": "https://avatars.mds.yandex.net/i?id=22536ff7dbe5f23d501de2dd7642d09351630ca2-8178526-images-thumbs&n=13"
+    },
+    {
+      "id": "2",
+      "first": "32",
+      "lastname": "valera",
+      "age": 23,
+      "currency": "EUR",
+      "country": "Russia",
+      "city": "",
+      "username": "admin2",
+      "avatar": "https://rebrainme.com/blog/wp-content/uploads/2020/05/haker.jpg"
+    }
+  ]
 }

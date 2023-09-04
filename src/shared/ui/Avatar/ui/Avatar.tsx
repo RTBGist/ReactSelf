@@ -5,7 +5,7 @@ import cls from './Avatar.module.scss';
 interface AvatarProps {
 	className?: string,
 	src: string | undefined,
-	alt: string,
+	alt?: string,
 	size?: number,
 }
 
@@ -13,7 +13,7 @@ export const Avatar = (props: AvatarProps) => {
   const {
     className,
     src = '',
-    alt,
+    alt = 'Картинка',
     size,
   } = props;
 
